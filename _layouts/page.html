@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="{{ page.background-color }}-bg py-5">
+<article class="pale-green-bg py-5">
   <div class="container my-5">
     <div class="row">
       <div class="col-12">
@@ -22,30 +22,32 @@ layout: default
         </a>
       </div>
       {% for category in site.categories %}
-        <div class="mx-auto  col-md-6 col-lg-3 my-1">
+        <div class="mx-auto col-md-6 col-lg-3 my-1">
           <a href="/projects/{{ category.slug }}" class="btn btn-danger w-100">
             {{ category.title }}
           </a>
         </div>
       {% endfor %}
     </div>
-    <div class="row">
+    <div class="row text-center">
       {% for project in site.projects %}
-        <div class="col-12 col-sm-6 col-md-4 text-center py-4">
-          <h4>{{ project.band }}</h2>
-            {% if project %}
-              {% assign categories = project.categories %}
+        {% if project.categories contains {{page.category}} %}
+          <div class="col-12 col-sm-6 col-md-4 py-4">
+            <h4>{{ project.band }}</h2>
+              {% if project %}
+                {% assign categories = project.categories %}
+              {% endif %}
+              {% for category in categories %}
+              <h6><a href="{{site.baseurl}}/projects/{{category|slugize}}">{{category}}</a>{% unless forloop.last %}, {% endunless %}</h6>
+              {% endfor %}
+            <p>{{ project.content | markdownify }}</p>
+            {% if project.embed %}
+              {{ project.embed }}
+            {% else %}
+              <a href="{{ project.url }}">link</a>
             {% endif %}
-            {% for category in categories %}
-            <h6><a href="{{site.baseurl}}/projects/{{category|slugize}}">{{category}}</a>{% unless forloop.last %}, {% endunless %}</h6>
-            {% endfor %}
-          <p>{{ project.content | markdownify }}</p>
-          {% if project.embed %}
-            {{ project.embed }}
-          {% else %}
-            <a href="{{ project.url }}">link</a>
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
