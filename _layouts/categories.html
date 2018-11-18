@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<article class="pale-green-bg py-5">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <header>
+          <h1 class="text-center">{{ page.title | escape }}</h1>
+        </header>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="py-5">
+  <div class="container">
+    <div class="row my-5">
+      <div class="mx-auto col-3">
+        <a href="/projects" class="btn btn-danger w-100">
+          All
+        </a>
+      </div>
+      {% for category in site.categories %}
+        <div class="mx-auto col-3">
+          <a href="/projects/{{ category.slug }}" class="btn btn-danger w-100">
+            {{ category.title }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row">
+      {% for project in site.projects %}
+        {% if project.categories contains {{page.category}} %}
+          <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+            <div class="card">
+              <div class="card-header d-flex flex-column align-items-top" style="min-height: 6rem;">
+                <h4>{{ project.band }}</h4>
+                {% if project %}
+                  {% assign categories = project.categories %}
+                {% endif %}
+                <p class="text-uppercase">
+                  {% for category in categories %}
+                    <a href="{{site.baseurl}}/projects/{{category|slugize}}">{{category}}</a>{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                </p>
+              </div>
+              <div class="card-body p-1">
+                {% if project.embed %}
+                  {{ project.embed }}
+                {% else %}
+                  <a href="{{ project.url }}">link</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</article>

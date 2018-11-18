@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<article class="{{ page.background-color }}-bg py-5">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <header>
+          <h1 class="text-center">{{ page.title | escape }}</h1>
+        </header>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-8 col-lg-6 mx-auto">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="py-5">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <header>
+          <h2 class="text-center">Latest Projects</h2>
+        </header>
+      </div>
+    </div>
+    <div class="row py-4">
+
+      {% for project in site.projects limit:3 %}
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 text-center">
+          <h4>{{ project.band }}</h4>
+          {% if project.embed %}
+            {{ project.embed }}
+          {% else %}
+            <a href="{{ project.url }}">link</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+    </div>
+    <div class="row">
+      <a href="/projects" class="btn btn-danger mx-auto">See more</a>
+    </div>
+  </div>
+</article>
+
+<article class="pale-green-bg py-5">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <header>
+          <h3 class="text-center">Contact me</h1>
+        </header>
+      </div>
+    </div>
+    <div class="row py-4">
+      <div class="col-lg-6 mx-auto">
+        <p class="text-center">I'll do whatever you want me to do.</p>
+      </div>
+    </div>
+    <div class="row">
+      <a href="/contact" class="btn btn-danger mx-auto">Contact me</a>
+    </div>
+  </div>
+</article>
