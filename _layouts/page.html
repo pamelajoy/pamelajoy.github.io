@@ -16,13 +16,13 @@ layout: default
 <article class="py-5">
   <div class="container">
     <div class="row my-5">
-      <div class="mx-auto col-md-6 col-lg-3">
+      <div class="mx-auto col-md-6 col-lg-3 my-1">
         <a href="/projects" class="btn btn-danger w-100">
           All
         </a>
       </div>
       {% for category in site.categories %}
-        <div class="mx-auto col-3">
+        <div class="mx-auto  col-md-6 col-lg-3 my-1">
           <a href="/projects/{{ category.slug }}" class="btn btn-danger w-100">
             {{ category.title }}
           </a>
