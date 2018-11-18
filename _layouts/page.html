@@ -31,22 +31,12 @@ layout: default
     </div>
     <div class="row text-center">
       {% for project in site.projects %}
-        {% if project.categories contains {{page.category}} %}
-          <div class="col-12 col-sm-6 col-md-4 py-4">
-            <h4>{{ project.band }}</h2>
-              {% if project %}
-                {% assign categories = project.categories %}
-              {% endif %}
-              {% for category in categories %}
-              <h6><a href="{{site.baseurl}}/projects/{{category|slugize}}">{{category}}</a>{% unless forloop.last %}, {% endunless %}</h6>
-              {% endfor %}
-            <p>{{ project.content | markdownify }}</p>
-            {% if project.embed %}
-              {{ project.embed }}
-            {% else %}
-              <a href="{{ project.url }}">link</a>
-            {% endif %}
-          </div>
+        {% if page.category %}
+          {% if project.categories contains {{page.category}} %}
+            {% include project-template.html %}
+          {% endif %}
+        {% else %}
+          {% include project-template.html %}
         {% endif %}
       {% endfor %}
     </div>
