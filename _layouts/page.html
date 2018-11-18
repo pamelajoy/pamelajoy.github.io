@@ -16,7 +16,7 @@ layout: default
 <article class="py-5">
   <div class="container">
     <div class="row my-5">
-      <div class="mx-auto col-3">
+      <div class="mx-auto col-md-6 col-lg-3">
         <a href="/projects" class="btn btn-danger w-100">
           All
         </a>
@@ -31,7 +31,7 @@ layout: default
     </div>
     <div class="row">
       {% for project in site.projects %}
-        <div class="col-12 col-sm-6 col-md-4 col-xl-3 text-center py-4">
+        <div class="col-12 col-sm-6 col-md-4 text-center py-4">
           <h4>{{ project.band }}</h2>
             {% if project %}
               {% assign categories = project.categories %}
