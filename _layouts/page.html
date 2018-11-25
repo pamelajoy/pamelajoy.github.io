@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="pale-green-bg py-5">
+<article class="{{ page.background-color }}--bg py-5">
   <div class="container my-5">
     <div class="row">
       <div class="col-12">
@@ -17,13 +17,13 @@ layout: default
   <div class="container">
     <div class="row my-5">
       <div class="mx-auto col-md-6 col-lg-3 my-1">
-        <a href="/projects" class="btn btn-danger w-100">
+        <a href="/projects" class="btn canary--btn w-100">
           All
         </a>
       </div>
       {% for category in site.categories %}
         <div class="mx-auto col-md-6 col-lg-3 my-1">
-          <a href="/projects/{{ category.slug }}" class="btn btn-danger w-100">
+          <a href="/projects/{{ category.slug }}" class="btn {{category.background-color}}--btn w-100">
             {{ category.title }}
           </a>
         </div>

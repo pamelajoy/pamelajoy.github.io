@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Greg Obis
-email: ""
+email: "gregobis@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Cool guy with neat skills.
 #baseurl: "" # the subpath of your site, e.g. /blog
@@ -31,9 +31,8 @@ plugins:
 
 # A list of the pages to display in the navigation bar
 header_pages:
-  - mastering.md
-  - mixing.md
-  - engineering.md
+  - projects.md
+  - contact.md
 
 collections:
   projects:

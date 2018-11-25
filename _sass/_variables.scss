@@ -38,19 +38,25 @@ $green:   #4BBF73 !default;
 $teal:    #20c997 !default;
 $cyan:    #1F9BCF !default;
 
-$cobalt:  #2723CC !default;
-$pale-green: #CADBC5 !default;
-$chartreuse: #EBFF01 !default;
-$pale-purple: lighten(#ECE5FF, 2%) !default;
-$kelly:   #3ED114 !default;
-$blood:   #CC1F15 !default;
+$greg-colors: (
+  'chartreuse-yellow': #EBFF01,
+  'canary': #BAFF63,
+  'lima': #4BCC15,
+  'spring-green': #19FFAD,
+  'blue-ribbon': #0C3CFF,
+  'blue-chalk': #ECD5FF,
+  'wild-strawberry': #FF258D,
+  'vivid-tangerine': #FF908C,
+  'zest': #E57E16,
+  'gold': #FFD100
+);
 
 $primary:       $gray-900 !default;
 $secondary:     $white !default;
-$success:       $kelly !default;
-$info:          $cobalt !default;
-$warning:       $chartreuse !default;
-$danger:        $blood !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $red !default;
+$danger:        $orange !default;
 $light:         $white !default;
 $dark:          $gray-800 !default;
 
@@ -73,10 +79,10 @@ $font-family-monospace:      'terminal_grotesque', SFMono-Regular, Menlo, Monaco
 
 $font-size-base:              0.875rem !default;
 
-$h1-font-size:                6rem !default;
-$h2-font-size:                3rem !default;
-$h3-font-size:                2rem !default;
-$h4-font-size:                1.5rem !default;
+$h1-font-size:                3rem !default;
+$h2-font-size:                2rem !default;
+$h3-font-size:                1.5rem !default;
+$h4-font-size:                1.25rem !default;
 $h5-font-size:                1rem !default;
 $h6-font-size:                0.75rem !default;
 
