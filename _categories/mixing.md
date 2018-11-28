@@ -2,6 +2,7 @@
 layout: categories
 title: "Mixing"
 category: mixing
-background-color: vivid-tangerine
+object-id: mixing
+background-color: fog
 permalink: "/projects/mixing"
 ---

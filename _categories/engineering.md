@@ -2,6 +2,7 @@
 layout: categories
 title: "Engineering"
 category: engineering
-background-color: spring-green
+object-id: engineering
+background-color: wild-watermelon
 permalink: "/projects/engineering"
 ---

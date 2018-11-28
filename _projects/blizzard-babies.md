@@ -2,6 +2,7 @@
 layout: post
 band: Blizzard Babies
 album: Missing Time
+label: Don Giovanni
 year: 2018
 categories: [mastering]
 embed: >

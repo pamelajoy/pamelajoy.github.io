@@ -1,7 +1,7 @@
 ---
 layout: default
 title: contact
-background-color: gold
+background-color: kournikova
 ---
 
 <article class="{{ page.background-color }}--bg py-5">

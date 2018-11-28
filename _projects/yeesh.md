@@ -2,6 +2,7 @@
 layout: post
 band: Bill MacKay & Ryley Walker
 album: Very Rare Expensive Jewelry
+label: Tiny Engines
 year: 2018
 categories: [engineering, mixing, mastering]
 embed: >

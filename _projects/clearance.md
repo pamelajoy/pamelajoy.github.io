@@ -2,6 +2,7 @@
 layout: post
 band: Clearance
 album: Missing Time
+label: Little Guys
 year: 2018
 categories: [engineering, mastering]
 embed: >
