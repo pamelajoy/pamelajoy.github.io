@@ -3,6 +3,9 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 1rem;
   text-align: left;
+  width: 80%;
+  max-width: 1140px;
+  column-gap: 1rem;
 }
 
 .left {
@@ -11,4 +14,9 @@
 
 .right {
   grid-column-start: 2;
+  display: flex;
+}
+
+.image {
+  margin: 1rem;
 }

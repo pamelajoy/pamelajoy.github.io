@@ -1,10 +1,8 @@
-import Container from '@mui/material/Container';
-
-function Home() {
+const Home = () => {
   return (
-      <Container>
+      <div>
         Hello this is home
-      </Container>
+      </div>
   );
 }
 export default Home;

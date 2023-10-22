@@ -1,10 +1,8 @@
-import Container from '@mui/material/Container';
-
-function Blog() {
+const Blog = () => {
   return (
-      <Container>
+      <div>
         Hello this is blog
-      </Container>
+      </div>
   );
 }
 export default Blog;

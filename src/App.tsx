@@ -5,7 +5,7 @@ import About from './scenes/About'
 import Blog from './scenes/Blog'
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Routes>

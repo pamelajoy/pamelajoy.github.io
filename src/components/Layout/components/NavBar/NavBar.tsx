@@ -1,29 +1,26 @@
 import { Link } from "react-router-dom";
-import {AppBar, Container, Toolbar, Typography}  from '@mui/material';
-import styles from './NavBar.module.css';
+import './NavBar.css';
 
-function ResponsiveAppBar() {
+const ResponsiveAppBar = () => {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" className={styles.container}>
-        <Toolbar>
-          <Typography variant="h4" className={styles.logo}>
-            Pamela Joy Reale
-          </Typography>
-            <div className={styles.navlinks}>
-              <Link to="/" className={styles.link}>
-                Home
-              </Link>
-              <Link to="/about" className={styles.link}>
-                About
-              </Link>
-              <Link to="/blog" className={styles.link}>
-                Blog
-              </Link>
-            </div>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <div className="navBar">
+      <div className="navContainer">
+        <span className="logo">
+          Pamela Joy Reale
+        </span>
+          <div className="navLinks">
+            <Link to="/" className="link">
+              Home
+            </Link>
+            <Link to="/about" className="link">
+              About
+            </Link>
+            <Link to="/blog" className="link">
+              Blog
+            </Link>
+          </div>
+      </div>
+    </div>
   );
 }
 export default ResponsiveAppBar;
