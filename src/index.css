@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --aquamarine: #A2FAD5;
+  --malibu: #6EABFA;
+  --mindaro: #D8FA70;
+  --copperfield: #E1826B;
+  --sea-buckthorn: #FAB22A;
+  --san-marino: #436899;
+}

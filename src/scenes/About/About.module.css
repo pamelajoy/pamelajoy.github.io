@@ -1,0 +1,14 @@
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.left {
+  grid-column-start: 1;
+}
+
+.right {
+  grid-column-start: 2;
+}
